@@ -1,67 +1,62 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
- <LinearLayout 
-     android:layout_width="fill_parent"
-     android:layout_height="fill_parent"
-     xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center" >
 
-     <TableLayout
-         android:layout_width="match_parent"
-         android:layout_height="match_parent" 
-         android:gravity="center" 
-         android:layout_marginLeft="25dp" 
-         android:layout_marginRight="25dp">
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
 
-         <TableRow
-             android:id="@+id/tableRow2"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:gravity="center" >
-
-             <TextView
-                 android:id="@+id/textView2"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="Ring Mode"
-                 android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ring Mode"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
          </TableRow>
 
          <TableRow
              android:id="@+id/tableRow3"
              android:layout_width="wrap_content"
-             android:layout_height="wrap_content" >
+             android:layout_height="wrap_content">
 
-             <RadioButton
-                 android:id="@+id/radioButton1"
+             <RadioGroup
+                 android:id="@+id/radioGroup1"
                  android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="Normal" />
+                 android:layout_height="wrap_content" >
 
-         </TableRow>
+                 <RadioButton
+                     android:id="@+id/radio0"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:checked="true"
+                     android:text="Normal"
+                     android:onClick="ringMode" />
 
-         <TableRow
-             android:id="@+id/tableRow4"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content" >
+                 <RadioButton
+                     android:id="@+id/radio1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Silent"
+                     android:onClick="ringMode" />
 
-             <RadioButton
-                 android:id="@+id/radioButton2"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="Silent" />
-
-         </TableRow>
-
-         <TableRow
-             android:id="@+id/tableRow5"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content" >
-
-             <RadioButton
-                 android:id="@+id/radioButton3"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="Vibrate" />
+                 <RadioButton
+                     android:id="@+id/radio2"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Vibrate"
+                     android:onClick="ringMode" />
+             </RadioGroup>
 
          </TableRow>
 
@@ -70,7 +65,8 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="Volume"
-             android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center"/>
+             android:textAppearance="?android:attr/textAppearanceLarge" 
+             android:gravity="center"/>
 
          <SeekBar
              android:id="@+id/seekBar1"
